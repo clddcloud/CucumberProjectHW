@@ -18,9 +18,6 @@ public class LoginValidationPage extends CommonMethods {
     @FindBy (id="spanMessage")
     public WebElement errorMessage;
 
-    @FindBy (id="welcome")
-    public WebElement welcomeMessage;
-
     public LoginValidationPage(){
          PageFactory.initElements(driver, this);
     }

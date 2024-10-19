@@ -64,6 +64,6 @@ public class LoginValidationSteps extends CommonMethods {
 
     @Then("user logins")
     public void userLogins() {
-        Assert.assertTrue(loginValidationPage.welcomeMessage.isDisplayed());
+        Assert.assertTrue(dashboardPage.welcomeMessage.isDisplayed());
     }
 }
