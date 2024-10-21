@@ -43,7 +43,7 @@ public class CommonMethods extends PageInitializer{
         driver.get(ConfigReader.read("url"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT));
 
-        PageInitializer.initializePageObject();
+        initializePageObject();
     }
     public static void closeBrowser(){
         if (driver!=null){
@@ -87,6 +87,10 @@ public class CommonMethods extends PageInitializer{
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
         return sdf.format(date);
 
+    }
+
+    public static int randomID () {
+            return ((int) (Math.random() * 1000000 - Math.random() * 3 + Math.random()));
     }
 
 }
